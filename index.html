@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reven81 - Gaming Technology Insights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">REVEN81</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <video autoplay muted loop>
+                    <source src="#" type="video/mp4">
+                </video>
+                <div class="hero-overlay">
+                    <div class="container">
+                        <h1>The Future of <span class="gradient-text">Gaming</span></h1>
+                        <p>Explore cutting-edge gaming technologies and trends with Reven81</p>
+                        <a href="https://in.ign.com/" class="btn">Explore Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="featured">
+                <div class="container">
+                    <h2 class="section-title">Featured Gaming Insights</h2>
+                    <div class="card-grid">
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h3>Next-Gen Consoles</h3>
+                            <p>Discover the latest hardware innovations</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3>Esports Evolution</h3>
+                            <p>The rise of competitive gaming</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h3>Gaming PC Builds</h3>
+                            <p>Optimize your gaming setup</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fas fa-headphones"></i>
+                            </div>
+                            <h3>Immersive Audio</h3>
+                            <p>Next-level sound technology</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <div class="about-content">
+                    <p>Welcome to REVEN81, your ultimate destination for all things gaming! Whether you're a hardcore gamer, an esports enthusiast, or just someone who loves exploring new worlds, we’ve got you covered.</p>
+                    <p>At REVEN81, we bring you the latest gaming news, reviews, guides, and updates on your favorite titles. Our mission is to build a passionate community of gamers who live and breathe gaming. From PC and console gaming to mobile and indie gems, we dive deep into everything that makes gaming exciting.</p>
+                    <p>Join us as we explore new levels, break records, and celebrate the world of gaming together. Game on! 🎮🔥</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    mobileMenu.classList.remove('active');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    if (mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                    }
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <a href="https://store.steampowered.com/agecheck/app/1888930/"><div class="gallery-item">
+                    <img src="./Last Of Us.jpg" alt="Gaming Image 1">
+                </div></a>
+
+
+                <a href="https://www.rockstargames.com/gta-v"><div class="gallery-item">
+                    <img src="./GTA V.jpg" alt="Gaming Image 1">
+                </div></a>
+                
+
+                <a href="https://store.steampowered.com/agecheck/app/1593500/"><div class="gallery-item">
+                    <img src="./God of war.jpg" alt="Gaming Image 1">
+                </div></a>
+
+                <a href="https://store.steampowered.com/app/1551360/Forza_Horizon_5/"><div class="gallery-item">
+                    <img src="./Forza Horizon 5.jpg" alt="Gaming Image 1">
+                </div></a>
+                
+                
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+        
+    
+</body>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-logo">REVEN81</h3>
+                <p>Your source for gaming insights and tech</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitch"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Reven81. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
